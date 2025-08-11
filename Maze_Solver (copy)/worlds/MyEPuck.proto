@@ -1,0 +1,30 @@
+#VRML_SIM R2023b utf8
+
+PROTO MyEPuck [
+  field SFVec3f    translation 0 0 0
+  field SFRotation rotation    0 1 0 0
+  field SFString   name        "my_epuck"
+]
+{
+  Robot {
+    translation IS translation
+    rotation IS rotation
+    children [
+      E-puck {
+        name IS name
+      }
+      Camera {
+        name "camera"
+        translation 0 0 0.05  # Slightly above robot
+        rotation 1 0 0 -1.57  # Pointing forward
+        width 320
+        height 240
+        fieldOfView 1.57
+        near 0.01
+      }
+    ]
+    controller "your_controller_name" # Optional
+    supervisor FALSE
+    synchronization TRUE
+  }
+}

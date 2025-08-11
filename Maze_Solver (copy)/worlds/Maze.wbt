@@ -4,12 +4,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/k-team/khepera4/protos/Khepera4.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.5468679073203077 -0.583952287554761 -0.5999460124066742 4.281107114222236
-  position -1.537923349849125 -2.647827426044633 7.6818358640793685
+  orientation -0.37463818793060016 -0.393718025820555 0.8394238168458417 4.587358326470176
+  position -2.7819671019023833 1.6652530998131372 2.2671948699102376
 }
 TexturedBackground {
 }
@@ -18,6 +19,8 @@ TexturedBackgroundLight {
 Wall {
   translation -3.11 -2.978 0
   size 0.018 0.75 0.11
+}
+Group {
 }
 RectangleArena {
   translation -1.354 -1.353 0
@@ -764,4 +767,12 @@ Wall {
   translation -0.61 -0.603 0
   name "wall(98)"
   size 0.018 1 0.11
+}
+Khepera4 {
+  hidden position_0_0 27227.774320851546
+  hidden position_0_1 27487.2081301511
+  hidden rotation_1 0.4810354810461366 -0.48103555281275795 0.7329458799289592 4.406586336468763
+  hidden rotation_2 -0.7060183460966085 0.7060183911128954 -0.055462837876981884 3.0307805855155205
+  translation -2.48134 -0.314175 -0.000180488
+  rotation -0.0007648881290822614 -0.0004350976125623849 -0.9999996128180338 1.802725186986996
 }
