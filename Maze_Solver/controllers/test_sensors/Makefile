@@ -5,7 +5,7 @@ INCLUDE = -I"$(WEBOTS_HOME)/include/controller/c"
 LIBS = -L"$(WEBOTS_HOME)/lib/controller" -lController
 CC = "$(WEBOTS_HOME)/msys64/mingw64/bin/gcc.exe"
 
-TARGET = khepra4
+TARGET = test_sensors
 SRC = $(TARGET).c
 BIN = $(TARGET).exe
 
