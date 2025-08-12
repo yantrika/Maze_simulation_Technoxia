@@ -4,12 +4,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/khapra4.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.5468679073203077 -0.583952287554761 -0.5999460124066742 4.281107114222236
-  position -1.537923349849125 -2.647827426044633 7.6818358640793685
+  orientation -0.25854201098142293 -0.23381712056224774 0.937275617249089 4.547850734503415
+  position -2.406559697097894 2.31992589443381 1.6899092881610538
 }
 TexturedBackground {
 }
@@ -18,6 +19,8 @@ TexturedBackgroundLight {
 Wall {
   translation -3.11 -2.978 0
   size 0.018 0.75 0.11
+}
+Group {
 }
 RectangleArena {
   translation -1.354 -1.353 0
@@ -764,4 +767,7 @@ Wall {
   translation -0.61 -0.603 0
   name "wall(98)"
   size 0.018 1 0.11
+}
+khapra4 {
+  controller "khepra4"
 }
