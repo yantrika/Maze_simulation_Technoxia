@@ -91,6 +91,10 @@ int main(int argc, char **argv)
         double right = wb_distance_sensor_get_value(ultrasonic_sensors[4]);
 
         // Print raw values for debugging
+        for (int j = 0; j < 5; j++)
+            printf("%.2lf\t",wb_distance_sensor_get_value(ultrasonic_sensors[j])-wb_distance_sensor_get_min_value(ultrasonic_sensors[j]));
+        printf("\n");
+        continue;
 
         // Convert to approximate cm (sensor scale factor)
         printf("Left: %.2lf \t Front: %.2lf \t Right: %.2lf\n", left, front, right);
