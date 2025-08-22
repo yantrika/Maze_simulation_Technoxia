@@ -15,9 +15,9 @@ PROTO abhiBoot [
   field SFColor    eyeColor     0.0 0.0 0.0
 
   field SFFloat    casterRadius 0.02
-field SFVec3f    casterPosition  -0.11 0 0.02   # <--- NEW FIELD
+field SFVec3f    casterPosition  -0.09 0 0.02   # <--- NEW FIELD
 
-  field SFString   controller   "test"
+  field SFString   controller   "manual"
 ]
 {
   Robot {
@@ -50,8 +50,7 @@ field SFVec3f    casterPosition  -0.11 0 0.02   # <--- NEW FIELD
       ]
       name "solid(5)"
       boundingObject USE eeye
-      physics Physics {
-      }
+      
     }
     DEF eye3 Solid {
       translation -0.126 0.06 0.06
@@ -77,8 +76,7 @@ field SFVec3f    casterPosition  -0.11 0 0.02   # <--- NEW FIELD
       ]
       name "solid(4)"
       boundingObject USE eeye
-      physics Physics {
-      }
+      
     }
     DEF eye1 Solid {
       translation -0.126 -0.06 0.06
@@ -104,8 +102,7 @@ field SFVec3f    casterPosition  -0.11 0 0.02   # <--- NEW FIELD
       ]
       name "solid(3)"
       boundingObject USE eeye
-      physics Physics {
-      }
+      
     }
     BallJoint {
         jointParameters BallJointParameters {
