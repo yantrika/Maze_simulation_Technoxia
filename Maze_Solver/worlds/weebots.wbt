@@ -1,0 +1,275 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Roughcast.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.2364636460233009 -0.01442996820868685 -0.9715331801471649 3.2600277887735887
+  position 0.07896859320883409 0.8094355136275668 0.37815018630672426
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+Wall {
+  translation -0.75 -0.76 0.0600013
+  rotation 6.140678099766299e-07 0.7071057811860166 0.7071077811853976 -3.1415853071795863
+  name "wall(3)"
+  size 0.013 0.11 1.5
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 1 0.1
+    }
+  }
+}
+Wall {
+  translation -0.75 -0.75 0.0600021
+  rotation 0.5773506025225371 0.5773506025225371 0.5773496025232256 2.0944
+  name "wall(2)"
+  size 0.018 0.11 1.49
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 1 0.1
+    }
+  }
+}
+Wall {
+  translation 0.75 -0.76 0.0599915
+  rotation 6.140678099766299e-07 0.7071057811860166 0.7071077811853976 -3.1415853071795863
+  name "wall(1)"
+  size 0.013 0.11 1.51
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 1 0.1
+    }
+  }
+}
+Robot {
+  translation -0.478041 0.877358 -0.0017233
+  rotation -0.05602596844820572 0.2933065477914815 0.9543753768209258 0.012626403772199002
+  children [
+    DEF eye2 Solid {
+      translation -0.076 0 0.06
+      children [
+        DEF ds_front DistanceSensor {
+          name "ds_front"
+          lookupTable [
+            0 0 0
+            0.1 100 0
+          ]
+        }
+        DEF eeye Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.05 0.01 0.008
+          }
+        }
+      ]
+      name "solid(5)"
+      boundingObject USE eeye
+      physics Physics {
+      }
+    }
+    DEF eye3 Solid {
+      translation -0.126 0.06 0.06
+      rotation 0 0 1 1.5708
+      children [
+        DEF ds_left DistanceSensor {
+          name "ds_left"
+          lookupTable [
+            0 0 0
+            0.1 100 0
+          ]
+        }
+        DEF eeye Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.05 0.01 0.008
+          }
+        }
+      ]
+      name "solid(4)"
+      boundingObject USE eeye
+      physics Physics {
+      }
+    }
+    DEF eye1 Solid {
+      translation -0.126 -0.06 0.06
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        DEF ds_right DistanceSensor {
+          name "ds_right"
+          lookupTable [
+            0 0 0
+            0.1 100 0
+          ]
+        }
+        DEF eeye Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.05 0.01 0.008
+          }
+        }
+      ]
+      name "solid(3)"
+      boundingObject USE eeye
+      physics Physics {
+      }
+    }
+    BallJoint {
+      jointParameters BallJointParameters {
+        position 66.65899423567912
+        anchor -0.09 0 0.02
+      }
+      jointParameters2 JointParameters {
+        position 1.1746412074571666
+      }
+      jointParameters3 JointParameters {
+        position 267.36385322530873
+        axis 0 1 0
+      }
+      endPoint Solid {
+        translation -0.09006953201324618 -9.218011663649909e-05 0.020008515608216537
+        rotation 0.20530876879322366 0.589198845801125 0.7814685083630898 3.7614548134538204
+        children [
+          DEF caster Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Sphere {
+              radius 0.02
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE caster
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 190.13727906188007
+        axis 0 1 0
+        anchor -0.16 -0.05 0.03
+      }
+      device [
+        PositionSensor {
+          name "right_sensor"
+        }
+        DEF m1 RotationalMotor {
+          name "m1"
+        }
+      ]
+      endPoint Solid {
+        translation -0.15999773704948575 -0.049975851955997005 0.029801925673468486
+        rotation 0.5500596225054942 0.5905215546070858 -0.5905240936943585 2.1358171205318675
+        children [
+          DEF WHeel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.03
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE WHeel
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 234.93140965540726
+        axis 0 1 0
+        anchor -0.16 0.05 0.03
+      }
+      device [
+        PositionSensor {
+          name "left_sensor"
+        }
+        DEF m2 RotationalMotor {
+          name "m2"
+        }
+      ]
+      endPoint Solid {
+        translation -0.16013319993862954 0.0500126643356206 0.02987239694830349
+        rotation 0.24557500381671465 0.6854521675610259 -0.6854547712915213 2.6599745970256343
+        children [
+          DEF WHeel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.03
+            }
+          }
+        ]
+        boundingObject USE WHeel
+        physics Physics {
+        }
+      }
+    }
+    DEF Body Pose {
+      translation -0.14 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.05
+            radius 0.05
+          }
+        }
+      ]
+    }
+  ]
+  name "robot(1)"
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "test"
+}
+Wall {
+  translation -0.76 0.74 0.060002
+  rotation 0.5773506025225371 0.5773506025225371 0.5773496025232256 2.0944
+  size 0.018 0.11 1.51
+  appearance Roughcast {
+    textureTransform TextureTransform {
+      scale 1 0.1
+    }
+  }
+}

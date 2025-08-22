@@ -1,0 +1,226 @@
+#VRML_SIM R2025a utf8
+# copyright - Ajay
+
+PROTO abhiBoot [
+    field SFVec3f    translation         0 0 0                   # Is `Pose.translation`.
+  field SFRotation rotation            0 0 1 0                 # Is `Pose.rotation`.
+  field SFVec3f    bodySize     0.06 0.06 0.06    # x=radius, y=height
+  field SFColor    bodyColor    0.0 0.5 1.0
+
+  field SFFloat    wheelRadius  0.03
+  field SFFloat    wheelWidth   0.02
+  field SFColor    wheelColor   1.0 0.0 0.0
+
+  field SFVec3f    eyeSize      0.05 0.01 0.008
+  field SFColor    eyeColor     0.0 0.0 0.0
+
+  field SFFloat    casterRadius 0.02
+field SFVec3f    casterPosition  -0.11 0 0.02   # <--- NEW FIELD
+
+  field SFString   controller   "test"
+]
+{
+  Robot {
+  translation IS translation
+    rotation IS rotation
+    name IS name
+    controller IS controller
+    controllerArgs IS controllerArgs
+  children [
+    DEF eye2 Solid {
+      translation -0.076 0 0.06
+      children [
+        DEF ds_front DistanceSensor {
+          name "ds_front"
+          lookupTable [
+            0 0 0
+            0.2 200 0
+          ]
+        }
+        DEF eeye Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.05 0.01 0.008
+          }
+        }
+      ]
+      name "solid(5)"
+      boundingObject USE eeye
+      physics Physics {
+      }
+    }
+    DEF eye3 Solid {
+      translation -0.126 0.06 0.06
+      rotation 0 0 1 1.5708
+      children [
+        DEF ds_left DistanceSensor {
+          name "ds_left"
+          lookupTable [
+            0 0 0
+            0.2 200 0
+          ]
+        }
+        DEF eeye Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.05 0.01 0.008
+          }
+        }
+      ]
+      name "solid(4)"
+      boundingObject USE eeye
+      physics Physics {
+      }
+    }
+    DEF eye1 Solid {
+      translation -0.126 -0.06 0.06
+      rotation 0 0 1 -1.5707953071795862
+      children [
+        DEF ds_right DistanceSensor {
+          name "ds_right"
+          lookupTable [
+            0 0 0
+            0.2 200 0
+          ]
+        }
+        DEF eeye Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.05 0.01 0.008
+          }
+        }
+      ]
+      name "solid(3)"
+      boundingObject USE eeye
+      physics Physics {
+      }
+    }
+    BallJoint {
+        jointParameters BallJointParameters {
+          anchor IS casterPosition   # <--- now user-controlled
+        }
+        endPoint Solid {
+          translation IS casterPosition  # <--- matches anchor
+          children [
+            DEF caster Shape {
+              appearance PBRAppearance {
+                baseColor 1 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius IS casterRadius   # <--- also linked
+              }
+            }
+          ]
+          boundingObject USE caster
+          physics Physics { }
+        }
+      }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 190.13727906188007
+        axis 0 1 0
+        anchor -0.16 -0.05 0.03
+      }
+      device [
+        PositionSensor {
+          name "right_sensor"
+        }
+        DEF m1 RotationalMotor {
+          name "m1"
+        }
+      ]
+      endPoint Solid {
+        translation -0.15999773704948575 -0.049975851955997005 0.029801925673468486
+        rotation 0.5500596225054942 0.5905215546070858 -0.5905240936943585 2.1358171205318675
+        children [
+          DEF WHeel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.03
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE WHeel
+        physics Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 234.93140965540726
+        axis 0 1 0
+        anchor -0.16 0.05 0.03
+      }
+      device [
+        PositionSensor {
+          name "left_sensor"
+        }
+        DEF m2 RotationalMotor {
+          name "m2"
+        }
+      ]
+      endPoint Solid {
+        translation -0.16013319993862954 0.0500126643356206 0.02987239694830349
+        rotation 0.24557500381671465 0.6854521675610259 -0.6854547712915213 2.6599745970256343
+        children [
+          DEF WHeel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.03
+            }
+          }
+        ]
+        boundingObject USE WHeel
+        physics Physics {
+        }
+      }
+    }
+    DEF Body Pose {
+      translation -0.14 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.05
+            radius 0.05
+          }
+        }
+      ]
+    }
+  ]
+  name "robot(1)"
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "test"
+ }
+}

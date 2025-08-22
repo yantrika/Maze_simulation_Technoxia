@@ -36,6 +36,9 @@ PROTO khapra4 [
     supervisor IS supervisor
     synchronization IS synchronization
     children [
+      DEF IMU InertialUnit {
+        name "inertial unit"
+      }
       Group {
         children IS turretSlot
       }
