@@ -33,9 +33,9 @@ int main() {
     double right = wb_distance_sensor_get_value(ir_right);
 
     // Thresholds may need tuning based on environment
-    int wall_left = left > 80.0;
-    int wall_front = front > 80.0;
-    int wall_right = right > 80.0;
+    int wall_left = left > 5.0;
+    int wall_front = front > 5.0;
+    int wall_right = right > 5.0;
 
     double left_speed = MAX_SPEED;
     double right_speed = MAX_SPEED;

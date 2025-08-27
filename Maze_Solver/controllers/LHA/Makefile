@@ -1,16 +1,20 @@
-# Corrected Makefile for khepra4 controller
-
-WEBOTS_HOME = C:/Webots
-INCLUDE = -I"$(WEBOTS_HOME)/include/controller/c"
-LIBS = -L"$(WEBOTS_HOME)/lib/controller" -lController
-CC = "$(WEBOTS_HOME)/msys64/mingw64/bin/gcc.exe"
+CXX = g++
+CXXFLAGS = -O2 -Wall -Wextra -std=c++17
+WEBOTS_HOME_PATH = $(WEBOTS_HOME)
+INCLUDE = -I"$(WEBOTS_HOME_PATH)/include/controller/cpp"
+LIBS = -L"$(WEBOTS_HOME_PATH)/lib/controller" -lCppController -lm
 
 TARGET = LHA
-SRC = $(TARGET).c
-BIN = $(TARGET).exe
+SOURCES = main.cpp RobotController.cpp
+OBJECTS = $(SOURCES:.cpp=.o)
 
-all:
-	$(CC) -Wall -Wextra -O2 $(INCLUDE) $(SRC) -o $(BIN) $(LIBS)
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(TARGET) $(LIBS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
 
 clean:
-	del $(BIN)
+	rm -f $(OBJECTS) $(TARGET)

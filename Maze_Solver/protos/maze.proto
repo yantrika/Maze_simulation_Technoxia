@@ -1,0 +1,637 @@
+#VRML_SIM R2025a utf8
+
+# Import the dependencies
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+
+PROTO Maze [
+  field SFVec3f translation 0 0 0
+  field SFRotation rotation 0 1 0 0
+] {
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+      # Floor
+      RectangleArena {
+        translation -1.354 -1.353 0
+        floorSize 4 4
+        floorTileSize 0.25 0.25
+        wallThickness 0.018
+        wallHeight 0.11
+      }
+
+Wall {
+  translation -0.612 -1.978 0
+ size 0.018 0.75 0.11
+}
+Wall {
+  translation -2.8625 -2.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.3625 -1.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.8625 -1.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.8625 -1.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.3625 -1.228 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.3625 -1.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.1375 -1.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.1125 -1.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.1125 -1.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.8625 -2.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.1125 -1.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.1125 -0.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.3625 0.022 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.1025 -0.238 0
+ size 0.018 0.265 0.11
+}
+Wall {
+  translation -0.8625 -0.488 0
+ size 0.018 0.265 0.11
+}
+Wall {
+  translation -0.8625 -0.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.3625 -2.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.8625 -2.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -3.1125 -2.228 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.6125 -2.228 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.1125 -2.228 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.1125 -1.228 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.86 -2.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.61 -2.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.112 -2.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.112 -1.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.612 -1.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -3.112 -1.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.736 -3.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -0.361 -3.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 1.516 0.11
+}
+Wall {
+  translation -0.361 -2.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 1.516 0.11
+}
+Wall {
+  translation 0.009 -2.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 1.26 0.11
+}
+Wall {
+  translation 0.019 -2.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 1.25 0.11
+}
+Wall {
+  translation -2.486 -2.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -0.986 -2.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.986 -2.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.27 0.11
+}
+Wall {
+  translation -2.986 -2.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -2.986 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -2.736 -2.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.9885 -2.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.729 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.729 -1.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.605 -1.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 1 0.11
+}
+Wall {
+  translation -0.979 -1.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.479 -1.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.619 -1.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 1 0.11
+}
+Wall {
+  translation -0.119 0.388 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 1 0.11
+}
+Wall {
+  translation -0.239 -1.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.265 0.11
+}
+Wall {
+  translation 0.011 -1.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.265 0.11
+}
+Wall {
+  translation 0.261 -1.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.265 0.11
+}
+Wall {
+  translation 0.521 -1.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -3.229 -1.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.737 -1.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.269 0.11
+}
+Wall {
+  translation -2.855 0.388 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -2.855 -0.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -2.855 -0.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -2.605 -0.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -2.729 -0.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.727 -1.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.252 0.11
+}
+Wall {
+  translation -3.229 -0.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.479 0.138 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.479 -1.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.979 0.138 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.271 -1.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.271 -1.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.75 0.11
+}
+Wall {
+  translation -0.59 -1.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.26 0.11
+}
+Wall {
+  translation -0.3605 -0.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.515 0.11
+}
+Wall {
+  translation -0.1105 -0.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.515 0.11
+}
+Wall {
+  translation 0.1395 -0.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.515 0.11
+}
+Wall {
+  translation -0.229 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.021 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.271 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.745 -1.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.9865 -1.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.27 0.11
+}
+Wall {
+  translation -1.989 -0.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.265 0.11
+}
+Wall {
+  translation -1.479 -0.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.479 -0.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.229 -0.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.982 -0.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.259 0.11
+}
+Wall {
+  translation -2.4875 -2.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.268 0.11
+}
+Wall {
+  translation -2.736 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.486 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.486 -1.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.853 -1.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -1.486 -1.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.236 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.236 -1.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.236 -1.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.236 0.138 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation 0.014 0.138 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation 0.264 -0.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation 0.514 -0.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -0.736 0.138 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -0.736 -0.362 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -0.986 -0.862 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -0.986 -0.612 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -0.986 0.388 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -1.2199 0.388 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -2.228 -2.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.236 -3.112 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -2.236 -2.595 0
+  rotation 0 0 1 -1.5707953071795862
+ size 0.018 0.266 0.11
+}
+Wall {
+  translation -2.36 -2.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.86 -2.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.86 -0.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.61 -0.978 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -2.862 0.012 0
+ size 0.018 0.75 0.11
+}
+Wall {
+  translation -3.112 -0.728 0
+ size 0.018 0.75 0.11
+}
+Wall {
+  translation -1.862 0.272 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.862 -0.3526 0
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -2.862 -1.3526 0
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -0.862 0.1474 0
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -1.362 -0.6026 0
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation -2.112 -0.2325 0
+ size 0.018 1.26 0.11
+}
+Wall {
+  translation -2.362 -0.4825 0
+ size 0.018 2.25 0.11
+}
+Wall {
+  translation -1.612 -0.8526 0
+ size 0.018 0.5 0.11
+}
+Wall {
+  translation 0.389 0.272 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.362 0.272 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.112 0.022 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.138 -0.228 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.388 -0.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.362 -0.478 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.388 -0.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.112 -0.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.362 -0.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation 0.138 -0.728 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -0.6122 0.272 0
+ size 0.018 0.25 0.11
+}
+Wall {
+  translation -1.61 -2.603 0
+ size 0.018 1 0.11
+}
+Wall {
+  translation -1.61 -1.603 0
+ size 0.018 1 0.11
+}
+Wall {
+  translation -1.11 -2.603 0
+ size 0.018 1 0.11
+}
+Wall {
+  translation -1.36 -2.853 0
+ size 0.018 1 0.11
+}
+Wall {
+  translation -1.61 0.147 0
+ size 0.018 1 0.11
+}
+Wall {
+  translation -0.61 -0.603 0
+ size 0.018 1 0.11
+}
+]
+    boundingObject Group {   # give it collisions
+      children [
+        USE WALL_BOUNDARIES   # or repeat your wall geometry here
+      ]
+    }
+    #physics Physics { }       # makes it dynamic & moveable
+  }
+}
